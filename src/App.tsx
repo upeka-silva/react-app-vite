@@ -6,7 +6,7 @@ import Customer from "./Customer.tsx";
  const customers=[
 
      {
-         id:1,
+         id:'1',
          avatar:'https://i0.wp.com/defendernetwork.com/wp-content/uploads/2022/02/Samuel-L.-Jackson-in-Pulp-Fiction.-Miramax.-JPEG-1.jpg?fit=1076%2C719&ssl=1',
          customerName:'jake paul',
          description:' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores mollitia \n' +
@@ -16,7 +16,7 @@ import Customer from "./Customer.tsx";
 
      },
      {
-         id:2,
+         id:'2',
          avatar:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToT8btLt8tzAy8np9G4u76oZmU6ckF1JFBEYv4Dj0JhwnucBLOaWYf1MkhVRKj8QKoR5U&usqp=CAU',
          customerName:'nelson',
          description:' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores mollitia \n' +
@@ -26,7 +26,7 @@ import Customer from "./Customer.tsx";
 
      },
      {
-         id:3,
+         id:'3',
          avatar:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU5gsnleF5JTeUZdAjTl6lSpHqS4zFNxxtcnPtlsbuFmHfb7FbqtizcY75Jf_YnHoKTL8&usqp=CAU',
          customerName:'liver pool',
          description:' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores mollitia \n' +
@@ -36,7 +36,7 @@ import Customer from "./Customer.tsx";
 
      },
      {
-         id:4,
+         id:'4',
          avatar:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzekyPrwf78iz8bwtVj_IyeS4-wN3hDlgpZw&s',
          customerName:'maker made',
          description:' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores mollitia \n' +
@@ -46,7 +46,7 @@ import Customer from "./Customer.tsx";
 
      },
      {
-         id:5,
+         id:'5',
          avatar:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGRA8M7caAQobx5GoLdPIHfXsaCgL60-C4nxYWtI3yKW2fSjmBxLcVc_Ege5eBIGuOWK0&usqp=CAU',
          customerName:'silva de ',
          description:' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores mollitia \n' +
@@ -63,11 +63,11 @@ function App() {
 
   return (
       <>
-          {customers.map((customer,index)=>{
+          {customers.map((customer)=>{
 
-              <Customer id={customer.id} avatar={customer.avatar}  name={customer.customerName}
-                         description={customer.description}
-                         userProfile={customer.userProfile} key={index} />
+             return <Customer id={customer.id} avatar={customer.avatar} customerName={customer.customerName}
+                        description={customer.description}
+                        userProfile={customer.userProfile}  key={customer.id} />
 
 
 

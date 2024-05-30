@@ -1,22 +1,20 @@
 
 interface CustomerType{
 
-    id:'',
-    avatar:'',
-    customerName:'',
-    description:'',
-    userProfile:''
+    id:string,
+    avatar:string,
+    customerName:string,
+    description:string,
+    userProfile:string
 
 }
 
 
-
-
-const Customer:React.FC=(props:CustomerType)=>{
+const Customer=(props:CustomerType)=>{
 
     return (
 
-        <div className="card" key={} >
+        <div className="card" key={props.id } >
             <img src={props.avatar} className="card-img-top" alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title">{props.customerName}</h5>
